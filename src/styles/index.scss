@@ -1,13 +1,47 @@
 @import "~bootstrap/scss/bootstrap.scss";
 
-/* 
+ul {
+    margin: 0;
+    padding: 0;
+}
 
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
+li {
+    list-style: none;
+}
 
-*/
+.trafficLight {
+    border-radius: 5px;
+    padding: 10px;
+    background: black;
+    margin: auto;
+    width: 70px;
+    li:nth-child(1){
+        background: rgba(255, 0, 0, 0.5); 
+        cursor: pointer;   
+    &.selected {
+            background: red;
+            box-shadow: red 0px 0px 40px 20px;
+        }
+    }
+    li:nth-child(2){
+        background: rgba(255, 255, 0, 0.5);
+        cursor: pointer;
+    &.selected2 {
+            background: yellow;
+            box-shadow: yellow 0px 0px 40px 20px;
+        }
+    }  
+    }
+    li:nth-child(3){
+        background: rgba(0, 128, 0, 0.5);
+        cursor: pointer;
+    &.selected3 {
+            background: rgb(0, 255, 0);
+            box-shadow: rgb(0, 255, 0) 0px 0px 40px 20px;
+        }
+    }
+    li {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+    }
